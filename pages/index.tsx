@@ -1,19 +1,19 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className="text-xl">Hello world</h1>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-1 flex items-center justify-center">
+        <h1 className="text-xl text-center max-w-xl">Hello world</h1>
       </main>
 
-      <footer className={styles.footer}>
+      <footer className="flex justify-center border-t py-4">
         <Image
+          unoptimized
           src="/icon.svg"
           alt="mhakash logo"
-          className={styles.logo}
+          className=""
           width={20}
           height={20}
         />

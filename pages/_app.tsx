@@ -1,6 +1,9 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/globals.css";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="Mehdi Hassan Akash" />
         <link rel="icon" href="/icon.svg" />
       </Head>
-      <Component {...pageProps} />
+
+      <div className={inter.className}>
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
