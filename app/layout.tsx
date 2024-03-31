@@ -30,7 +30,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
               width={20}
               height={20}
             />
-            <span className="ml-2">2023</span>
+            <span className="ml-2">2024</span>
           </footer>
         </div>
       </body>
