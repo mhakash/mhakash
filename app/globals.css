@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    background-color: #f7f6f2;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.prose hr + p {
+  font-family: ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace !important;
+  font-size: 0.8125rem !important;
+  color: #78716c !important;
+  margin-top: 0 !important;
 }
