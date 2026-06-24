@@ -4,9 +4,29 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const title = "Mehdi Hassan Akash";
+const description =
+  "AI engineer at IQVIA building agentic systems for pharmaceutical clients.";
+
 export const metadata: Metadata = {
-  title: "Mehdi Hassan Akash",
-  description: "Software engineer at IQVIA building AI systems for pharmaceutical analytics.",
+  metadataBase: new URL("https://mhakash.com"),
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: title,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({

@@ -12,6 +12,31 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .fade-in {
+    animation: fade-in 0.7s ease-out both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+  }
+}
+
+.prose a {
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 .prose hr + p {
