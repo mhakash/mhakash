@@ -1,21 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   body {
     background-color: #f7f6f2;
+    background-image: linear-gradient(
+      160deg,
+      rgba(13, 148, 136, 0.32) 0%,
+      rgba(20, 184, 166, 0.12) 35%,
+      rgba(247, 246, 242, 0) 70%
+    );
+    background-attachment: fixed;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  html.dark body {
+    background-color: #1c1917;
+    background-image: linear-gradient(
+      160deg,
+      rgba(45, 212, 191, 0.09) 0%,
+      rgba(20, 184, 166, 0.03) 35%,
+      rgba(28, 25, 23, 0) 70%
+    );
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@utility text-balance {
+  text-wrap: balance;
+}
 
-  .fade-in {
-    animation: fade-in 0.7s ease-out both;
-  }
+@utility fade-in {
+  animation: fade-in 0.7s ease-out both;
 }
 
 @keyframes fade-in {
